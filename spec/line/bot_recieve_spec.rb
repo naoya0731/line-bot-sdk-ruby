@@ -170,6 +170,8 @@ describe Line::Bot::Receive do
     content = message.content
     expect(content).to be_a(Line::Bot::Message::Text)
 
+    expect(message.from_mid).to eq "uff2aec188e58752ee1fb0f9507c6529a"
+    expect(message.to_mid).to eq ["u0a556cffd4da0dd89c94fb36e36e1cdc"]
     expect(message.created_time.to_i).to eq 1332394961
     expect(message.created_time.usec).to eq 610
 
@@ -184,6 +186,8 @@ describe Line::Bot::Receive do
     expect(message).to be_a(Line::Bot::Receive::Message)
     expect(message.id).to eq "325708"
 
+    expect(message.from_mid).to eq "uff2aec188e58752ee1fb0f9507c6529a"
+    expect(message.to_mid).to eq ["u0a556cffd4da0dd89c94fb36e36e1cdc"]
     expect(message.created_time.to_i).to eq 1332394961
     expect(message.created_time.usec).to eq 610
 
@@ -199,6 +203,8 @@ describe Line::Bot::Receive do
     expect(message).to be_a(Line::Bot::Receive::Message)
     expect(message.id).to eq "325708"
 
+    expect(message.from_mid).to eq "uff2aec188e58752ee1fb0f9507c6529a"
+    expect(message.to_mid).to eq ["u0a556cffd4da0dd89c94fb36e36e1cdc"]
     expect(message.created_time.to_i).to eq 1332394961
     expect(message.created_time.usec).to eq 610
 
@@ -219,6 +225,8 @@ describe Line::Bot::Receive do
     expect(message).to be_a(Line::Bot::Receive::Message)
     expect(message.id).to eq "325708"
 
+    expect(message.from_mid).to eq "uff2aec188e58752ee1fb0f9507c6529a"
+    expect(message.to_mid).to eq ["u0a556cffd4da0dd89c94fb36e36e1cdc"]
     expect(message.created_time.to_i).to eq 1332394961
     expect(message.created_time.usec).to eq 610
 
